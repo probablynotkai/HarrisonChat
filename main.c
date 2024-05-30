@@ -49,7 +49,7 @@ void start_chat(int connfd) {
 }
 
 char* serialiseRequestObject(HarrisonRequest request) {
-    char* format = "{type:'%s'\xACmessage:'%s'\xACstatus:%d}";
+    char* format = "{type:%s\xACmessage:%s\xACstatus:%d}";
 
     size_t bufferSize = 500;
     char* buffer = (char*)malloc(bufferSize);
